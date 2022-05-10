@@ -1,0 +1,83 @@
++
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bangla PoS Tagger | Home</title>
+</head>
+
+<body>
+  <center>
+    <div class="login">
+      <h1>Bangla PoS Tagger</h1>
+
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('getpostags')}}" method="POST">
+        <input type="text" name="src" placeholder="Bangla Sentence" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Get PoS Tags</button>
+      </form>
+      <br>
+      <h3>Bangla: {{ src }}</h3>
+      <br>
+      <h3>Translated: {{ tgt }}</h3>
+      <br>
+
+      <h3>Word Mapping : </h3>
+      <table>
+        <tbody>
+          {% for each in word_mapping %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ each }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h3>NLTK PoS Tags:</h3>
+      <table>
+        <tbody>
+          {% for each in nltk_postag %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ each }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <br>
+      <h3>Spacy PoS Tags:</h3>
+      <table>
+        <tbody>
+          {% for each in spacy_postag %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ each }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br>
+
+      <h3>Flair PoS Tags:</h3>
+      <table>
+        <tbody>
+          {% for each in flair_postag %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ each }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <br>
+    </div>
+  </center>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<mxfile host="65bd71144e">
+    <diagram id="GV6f6-LDRkFQ3j1vTl66" name="Page-1">
+        <mxGraphModel dx="820" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="275" y="200" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Taking a Bengali Sentence as Input&lt;br&gt;(Max 5000 characters)&lt;br&gt;Ex. আমার কাছে ১৬৭৮৯ টাকা নেই।" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="310" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="7" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Translate to English&lt;br&gt;Ex. I don't have16789&amp;nbsp;rupees." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="490" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="460" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="11" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Decontracting Words&lt;br&gt;Ex. I do not have 16789&amp;nbsp;rupees." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="580" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Replace rupees and Rs with takas&lt;br&gt;Ex. I do not have16789 takas." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="670" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="15" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Giving one space before and after a punctuation marks of Both Bengali and English sentence&lt;br&gt;&lt;br&gt;Ex. &lt;br&gt;আমার কাছে ১৬৭৮৯ টাকা নেই ।&lt;br&gt;I do not have16789 takas ." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="760" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Split both Bengali and English sentences and Aligning them with the help of our aligner model.&lt;br&gt;&lt;br&gt;Ex. &lt;br&gt;&lt;div&gt;আমার -&amp;gt; I&lt;/div&gt;&lt;div&gt;কাছে -&amp;gt; have&lt;/div&gt;&lt;div&gt;১৬৭৮৯ -&amp;gt; 16789&lt;/div&gt;&lt;div&gt;টাকা -&amp;gt; takas&lt;/div&gt;&lt;div&gt;নেই -&amp;gt; not&lt;/div&gt;&lt;div&gt;। -&amp;gt; .&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="910" width="240" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.47;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="19" target="26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Replace English Words with their corresponding PoS Tags&lt;br&gt;&lt;br&gt;Ex. &lt;br&gt;&lt;div&gt;আমার -&amp;gt; PRP&lt;/div&gt;&lt;div&gt;কাছে -&amp;gt; VB&lt;/div&gt;&lt;div&gt;১৬৭৮৯ -&amp;gt; CD&lt;/div&gt;&lt;div&gt;টাকা -&amp;gt; NN&lt;/div&gt;&lt;div&gt;নেই -&amp;gt; RB&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Note: We have experimented on NLTK, spaCy and Flair English PoS Tagger. All are giving same PoS Tags.&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="1254" width="240" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="22">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="475" y="1164" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="22">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="375" y="1254" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="Is it a punctuation mark?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="335" y="1124" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;span&gt;Assign 'PUNC' tag&lt;br&gt;Ex.&lt;br&gt;। -&amp;gt; PUNC&lt;br&gt;Note: PoS Tagger doesn't have any tag for punctuation. So, we assign a new tag.&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="475" y="1112" width="175" height="106" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="415" y="1144" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="375" y="1204" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="End" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="1504" width="200" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
