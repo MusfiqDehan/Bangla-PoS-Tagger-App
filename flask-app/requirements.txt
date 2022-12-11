@@ -4,5 +4,5 @@
 
 flask
 data-preprocessors==0.24.0
-bangla-postaggers==0.13.0
+bangla-postagger==0.13.0
 
