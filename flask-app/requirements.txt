@@ -3,6 +3,6 @@
 # transformers==4.18.0
 
 flask
-data-preprocessors
-bangla-postaggers
+data-preprocessors==0.24.0
+bangla-postaggers==0.13.0
 
